@@ -1,23 +1,32 @@
-# libft 🚀
+*This project has been created as part of the 42 curriculum by czuluaga.*
 
-This repository contains my solution for the **libft** project, part of the 42 school common core.
+# libft
 
-> ⚠ Before copying any code from this repository, I highly recommend that students consult with their peers to discuss potential solutions. Use this code for inspiration and as a learning resource.
-
-## Description 📋
+## Description
 
 **libft** is the first project of the 42 Cursus.
 
 The goal is to create a custom library that will serve as a foundational tool for all future C projects. This library includes a comprehensive set of functions, recreating standard `libc` behavior as well as implementing additional utility functions.
 
-## Status 🔋
+## Instructions 
 
-- **Finished:** 22/03/2026
-- **Grade:** ⚠ Pending Evaluation
+Inside this repository you will find a Makefile that compiles the entire library and creates an .a object.
 
----
+After library compilation you can reference it inside any other project.
 
-## Functions ⚙
+## Resources
+
+Here is a list of resources used on this project:
+
+- [GNU documentation](https://www.gnu.org/)
+
+
+
+## Content
+
+Inside every function .c file there is a fully explanation of what it does.
+
+### Part 1 and Part 2
 
 These functions are primarily designed for character, string, and memory manipulation.
 
@@ -52,15 +61,14 @@ These functions are primarily designed for character, string, and memory manipul
 - `ft_atoi`
 - `ft_calloc`
 
-### Additional Functions (Non-standard)
+#### Additional Functions (Non-standard)
 
 - `ft_substr` | `ft_strjoin` | `ft_strtrim` | `ft_split`
 - `ft_itoa` | `ft_strmapi` | `ft_striteri`
 - `ft_putchar_fd` | `ft_putstr_fd` | `ft_putendl_fd` | `ft_putnbr_fd`
 
----
 
-## Bonus Part
+### Part 3 - lists
 
 This section focuses on implementing a set of functions to manipulate **Singly Linked Lists**.
 

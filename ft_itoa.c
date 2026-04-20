@@ -6,15 +6,15 @@
 /*   By: czuluaga <czuluaga@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/22 08:48:00 by czuluaga          #+#    #+#             */
-/*   Updated: 2026/03/22 08:48:01 by czuluaga         ###   ########.fr       */
+/*   Updated: 2026/04/20 11:25:03 by czuluaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int ft_num_of_digits(int n)
+static int	ft_num_of_digits(int n)
 {
-	int ndigits;
+	int	ndigits;
 
 	ndigits = 1;
 	if (n < 0)
@@ -37,12 +37,12 @@ static int ft_num_of_digits(int n)
 	A pointer to the string representing the number.
 	NULL if allocation fails.
 */
-char *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
-	char *str;
-	int ndigits;
-	int stop;
-	long num;
+	char	*str;
+	int		ndigits;
+	int		stop;
+	long	num;
 
 	num = n;
 	stop = 0;

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_front_bonus.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: czuluaga <czuluaga@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/22 08:48:32 by czuluaga          #+#    #+#             */
-/*   Updated: 2026/03/22 08:48:32 by czuluaga         ###   ########.fr       */
+/*   Created: 2026/03/22 08:48:21 by czuluaga          #+#    #+#             */
+/*   Updated: 2026/04/20 11:26:51 by czuluaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,13 @@
 
 /*
 	DESCRIPTION
-	The ft_lstiter() function iterates through the list 'lst' and applies
-	the function 'f' to the content of each node.
+	The ft_lstadd_front() function adds the node 'new' at the beginning
+	of the list.
 */
-void ft_lstiter(t_list *lst, void (*f)(void *))
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	while (lst)
-	{
-		(*f)(lst->content);
-		lst = lst->next;
-	}
+	if (!new)
+		return ;
+	new->next = *lst;
+	*lst = new;
 }

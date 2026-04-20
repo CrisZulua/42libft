@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*   ft_lstlast_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: czuluaga <czuluaga@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/22 08:48:21 by czuluaga          #+#    #+#             */
-/*   Updated: 2026/03/22 08:48:22 by czuluaga         ###   ########.fr       */
+/*   Created: 2026/03/22 08:48:36 by czuluaga          #+#    #+#             */
+/*   Updated: 2026/04/20 11:27:54 by czuluaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,17 @@
 
 /*
 	DESCRIPTION
-	The ft_lstadd_front() function adds the node 'new' at the beginning
+	The ft_lstlast() find the last node of the list.
+
+	RETURN
+	The ft_lstlast() returns a pointer to the last node
 	of the list.
 */
-void ft_lstadd_front(t_list **lst, t_list *new)
+t_list	*ft_lstlast(t_list *lst)
 {
-	if (!new)
-		return;
-	new->next = *lst;
-	*lst = new;
+	if (!lst)
+		return (NULL);
+	while (lst->next)
+		lst = lst->next;
+	return (lst);
 }

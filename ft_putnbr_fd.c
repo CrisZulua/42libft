@@ -6,7 +6,7 @@
 /*   By: czuluaga <czuluaga@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/22 08:49:43 by czuluaga          #+#    #+#             */
-/*   Updated: 2026/03/22 08:49:44 by czuluaga         ###   ########.fr       */
+/*   Updated: 2026/04/20 11:38:09 by czuluaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@
 	DESCRIPTION
 	Outputs the integer 'n' to the specified file descriptor fd.
 */
-void ft_putnbr_fd(int n, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
-	char *str;
+	char	*str;
 
 	str = ft_itoa(n);
 	ft_putstr_fd(str, fd);

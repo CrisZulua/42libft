@@ -6,16 +6,16 @@
 /*   By: czuluaga <czuluaga@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/22 08:49:51 by czuluaga          #+#    #+#             */
-/*   Updated: 2026/03/22 08:49:52 by czuluaga         ###   ########.fr       */
+/*   Updated: 2026/04/20 15:37:45 by czuluaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int ft_get_num_words(char const *s, char c)
+static int	ft_get_num_words(char const *s, char c)
 {
-	int num_words;
-	size_t i;
+	int		num_words;
+	size_t	i;
 
 	i = 0;
 	num_words = 0;
@@ -30,11 +30,11 @@ static int ft_get_num_words(char const *s, char c)
 	return (num_words);
 }
 
-static char *ft_get_word(const char *s, char c, size_t *pos)
+static char	*ft_get_word(const char *s, char c, size_t *pos)
 {
-	char *word;
-	size_t len;
-	size_t i;
+	char	*word;
+	size_t	len;
+	size_t	i;
 
 	i = 0;
 	len = 0;
@@ -53,12 +53,13 @@ static char *ft_get_word(const char *s, char c, size_t *pos)
 	return (word);
 }
 
-static void ft_free_split(char **split, size_t n)
+static void	ft_free_split(char **split, size_t n)
 {
 	while (n--)
 		free(split[n]);
 	free(split);
 }
+
 /*
 	DESCRIPTION
 	Allocates memory and returns an array of strings obtained
@@ -72,12 +73,12 @@ static void ft_free_split(char **split, size_t n)
 	The array of new strings resulting from the split.
 	NULL if the allocation fails.
 */
-char **ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
-	char **split_words;
-	int num_words;
-	size_t i;
-	size_t wcnt;
+	char	**split_words;
+	int		num_words;
+	size_t	i;
+	size_t	wcnt;
 
 	i = 0;
 	wcnt = 0;

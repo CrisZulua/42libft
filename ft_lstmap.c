@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: czuluaga <czuluaga@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/22 08:48:40 by czuluaga          #+#    #+#             */
-/*   Updated: 2026/03/22 08:48:41 by czuluaga         ###   ########.fr       */
+/*   Updated: 2026/04/20 11:28:04 by czuluaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,11 @@
 	The function ft_lstmap() returns a pointer to the new list created.
 	NULL if the memory allocation fails.
 */
-t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list *new_lst;
-	t_list *prev;
-	t_list *node;
+	t_list	*new_lst;
+	t_list	*prev;
+	t_list	*node;
 
 	new_lst = NULL;
 	prev = NULL;

@@ -6,7 +6,7 @@
 /*   By: czuluaga <czuluaga@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/22 08:50:27 by czuluaga          #+#    #+#             */
-/*   Updated: 2026/03/22 08:50:28 by czuluaga         ###   ########.fr       */
+/*   Updated: 2026/04/20 11:33:31 by czuluaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,12 @@
 	A pointer to the new string.
 	NULL if the allocation fails
 */
-char *ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t i;
-	size_t s1_len;
-	size_t s2_len;
-	char *joined_str;
+	size_t	i;
+	size_t	s1_len;
+	size_t	s2_len;
+	char	*joined_str;
 
 	s1_len = ft_strlen(s1);
 	s2_len = ft_strlen(s2);

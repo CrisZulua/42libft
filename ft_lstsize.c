@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*   ft_lstsize_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: czuluaga <czuluaga@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/22 08:48:24 by czuluaga          #+#    #+#             */
-/*   Updated: 2026/03/22 08:48:25 by czuluaga         ###   ########.fr       */
+/*   Created: 2026/03/22 08:48:47 by czuluaga          #+#    #+#             */
+/*   Updated: 2026/04/20 11:29:28 by czuluaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,20 @@
 
 /*
 	DESCRIPTION
-	The ft_lstclear() function deletes and frees the given node and all its
-	successors, using the function 'del' to free its content and free() to
-	free the node itself.
+	The ft_lstsize() counts the number of nodes of the list.
 
-	Finally, set the pointer to the list to NULL.
+	RETURN
+	The ft_lstsize() returns the length of the list.
 */
-void ft_lstclear(t_list **lst, void (*del)(void *))
+int	ft_lstsize(t_list *lst)
 {
-	t_list *curr;
-	t_list *cnext;
+	int	i;
 
-	curr = *lst;
-	while (curr)
+	i = 0;
+	while (lst)
 	{
-		cnext = curr->next;
-		ft_lstdelone(curr, del);
-		curr = cnext;
+		lst = lst->next;
+		i++;
 	}
-	*lst = NULL;
+	return (i);
 }

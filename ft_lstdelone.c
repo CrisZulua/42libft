@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstdelone_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: czuluaga <czuluaga@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/22 08:48:44 by czuluaga          #+#    #+#             */
-/*   Updated: 2026/03/22 08:48:44 by czuluaga         ###   ########.fr       */
+/*   Created: 2026/03/22 08:48:28 by czuluaga          #+#    #+#             */
+/*   Updated: 2026/04/20 11:27:44 by czuluaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,13 @@
 
 /*
 	DESCRIPTION
-	The ft_lstnew() function allocates memory for a new node,
-	initializes the new node content to content and next to NULL.
-
-	RETURN
-	The ft_lstnew() function returns a pointer to the new node.
-	NULL if memory allocation fails.
+	The ft_lstdelone() function takes the node 'lst' and frees its content
+	using the function 'del'. Finally Freeing the node itself.
 */
-t_list *ft_lstnew(void *content)
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	t_list *new_node;
-
-	new_node = (t_list *)malloc(sizeof(t_list));
-	if (!new_node)
-		return (NULL);
-	new_node->content = content;
-	new_node->next = NULL;
-	return (new_node);
+	if (!lst)
+		return ;
+	(*del)(lst->content);
+	free(lst);
 }

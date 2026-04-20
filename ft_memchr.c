@@ -6,7 +6,7 @@
 /*   By: czuluaga <czuluaga@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/22 08:48:50 by czuluaga          #+#    #+#             */
-/*   Updated: 2026/03/22 08:48:51 by czuluaga         ###   ########.fr       */
+/*   Updated: 2026/04/20 11:29:50 by czuluaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@
 	The ft_memchr() function return a pointer to  the  matching
 	byte or NULL if the character does not occur in the given memory area.
 */
-void *ft_memchr(const void *s, int c, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	unsigned char *str;
+	unsigned char	*str;
 
 	str = (unsigned char *)s;
 	while (n--)

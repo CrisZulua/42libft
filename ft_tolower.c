@@ -6,7 +6,7 @@
 /*   By: czuluaga <czuluaga@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/22 08:51:09 by czuluaga          #+#    #+#             */
-/*   Updated: 2026/03/22 08:51:10 by czuluaga         ###   ########.fr       */
+/*   Updated: 2026/04/20 11:34:56 by czuluaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 	RETURN
 	Uppercase equivalent.
 */
-int ft_tolower(int c)
+int	ft_tolower(int c)
 {
 	if (!ft_isalpha(c) || c > 90)
 		return ((unsigned char)c);

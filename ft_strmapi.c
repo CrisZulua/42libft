@@ -6,7 +6,7 @@
 /*   By: czuluaga <czuluaga@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/22 08:50:41 by czuluaga          #+#    #+#             */
-/*   Updated: 2026/03/22 08:50:42 by czuluaga         ###   ########.fr       */
+/*   Updated: 2026/04/20 11:34:01 by czuluaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,11 @@
 	A pointer to the string created.
 	NULL if the allocation fails.
 */
-char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char *smap;
-	size_t slen;
-	size_t i;
+	char	*smap;
+	size_t	slen;
+	size_t	i;
 
 	slen = ft_strlen(s);
 	smap = (char *)malloc((slen + 1) * sizeof(char));

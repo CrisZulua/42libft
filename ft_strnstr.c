@@ -6,7 +6,7 @@
 /*   By: czuluaga <czuluaga@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/22 08:50:49 by czuluaga          #+#    #+#             */
-/*   Updated: 2026/03/22 08:50:49 by czuluaga         ###   ########.fr       */
+/*   Updated: 2026/04/20 11:34:18 by czuluaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,12 @@
 	in big, NULL is returned; otherwise a pointer to the first character of
 	the first occurrence of little is returned.
 */
-char *ft_strnstr(const char *big, const char *little, size_t len)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	size_t llen;
-	size_t blen;
-	size_t i;
-	size_t j;
+	size_t	llen;
+	size_t	blen;
+	size_t	i;
+	size_t	j;
 
 	llen = ft_strlen(little);
 	blen = ft_strlen(big);

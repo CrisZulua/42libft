@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_lstiter_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: czuluaga <czuluaga@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/22 08:48:18 by czuluaga          #+#    #+#             */
-/*   Updated: 2026/03/22 08:48:19 by czuluaga         ###   ########.fr       */
+/*   Created: 2026/03/22 08:48:32 by czuluaga          #+#    #+#             */
+/*   Updated: 2026/04/20 11:27:49 by czuluaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,14 @@
 
 /*
 	DESCRIPTION
-	The ft_lstadd_back() function adds the node 'new' at the end of the list.
+	The ft_lstiter() function iterates through the list 'lst' and applies
+	the function 'f' to the content of each node.
 */
-void ft_lstadd_back(t_list **lst, t_list *new)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	t_list *last_node;
-
-	if (!new)
-		return;
-	if (!(*lst))
+	while (lst)
 	{
-		*lst = new;
-		return;
+		(*f)(lst->content);
+		lst = lst->next;
 	}
-	last_node = ft_lstlast(*lst);
-	last_node->next = new;
 }

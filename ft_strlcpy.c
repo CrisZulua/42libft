@@ -6,7 +6,7 @@
 /*   By: czuluaga <czuluaga@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/22 08:50:34 by czuluaga          #+#    #+#             */
-/*   Updated: 2026/03/22 08:50:35 by czuluaga         ###   ########.fr       */
+/*   Updated: 2026/04/20 15:02:56 by czuluaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,14 +22,14 @@
 	The ft_strlcpy() returns the total length of the string it
 	tried to create. That means the length of src.
 */
-size_t ft_strlcpy(char *dst, const char *src, size_t dsize)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	size_t src_len;
+	size_t	src_len;
 
 	src_len = ft_strlen(src);
 	if (!src || !dst)
 		return (src_len);
-	while (dsize-- > 1 && *src)
+	while (size-- > 1 && *src)
 	{
 		*dst++ = *src++;
 	}

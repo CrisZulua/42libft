@@ -6,7 +6,7 @@
 /*   By: czuluaga <czuluaga@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/22 08:50:51 by czuluaga          #+#    #+#             */
-/*   Updated: 2026/03/22 08:50:52 by czuluaga         ###   ########.fr       */
+/*   Updated: 2026/04/20 11:34:30 by czuluaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,9 @@
 	part of the string, so that if c is specified as '\0', these functions
 	return a pointer to the terminator.
 */
-char *ft_strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
-	int slen;
+	int	slen;
 
 	slen = ft_strlen(s);
 	while (slen >= 0)

@@ -6,7 +6,7 @@
 /*   By: czuluaga <czuluaga@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/22 08:50:31 by czuluaga          #+#    #+#             */
-/*   Updated: 2026/03/22 08:50:31 by czuluaga         ###   ########.fr       */
+/*   Updated: 2026/04/20 16:40:33 by czuluaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,25 +16,25 @@
 	DESCRIPTION
 	The strlcat() function appends the NUL-terminated string
 	src to the end of dst. It will append at most
-	dsize - strlen(dst) - 1 bytes, NUL-terminating the result.
+	size - strlen(dst) - 1 bytes, NUL-terminating the result.
 
 	RETURN
 	The function ft_strlcat() returns the total length of the
 	string it tried to create. That means the initial length
 	of dst plus the length of src.
 */
-size_t ft_strlcat(char *dst, const char *src, size_t dsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t slen;
-	size_t dlen;
-	size_t i;
+	size_t	slen;
+	size_t	dlen;
+	size_t	i;
 
 	slen = ft_strlen(src);
 	dlen = ft_strlen((const char *)dst);
-	if (!src || !dst)
-		return (slen + dlen);
+	if (!src || !dst || (size <= dlen))
+		return (slen + size);
 	i = 0;
-	while (i < (dsize - dlen - 1) && *src)
+	while (i < (size - dlen - 1) && *src)
 	{
 		*(dst + dlen + i) = *(src + i);
 		i++;

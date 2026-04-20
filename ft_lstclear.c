@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
+/*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: czuluaga <czuluaga@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/22 08:48:28 by czuluaga          #+#    #+#             */
-/*   Updated: 2026/03/22 08:48:29 by czuluaga         ###   ########.fr       */
+/*   Created: 2026/03/22 08:48:24 by czuluaga          #+#    #+#             */
+/*   Updated: 2026/04/20 11:27:20 by czuluaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,23 @@
 
 /*
 	DESCRIPTION
-	The ft_lstdelone() function takes the node 'lst' and frees its content
-	using the function 'del'. Finally Freeing the node itself.
+	The ft_lstclear() function deletes and frees the given node and all its
+	successors, using the function 'del' to free its content and free() to
+	free the node itself.
+
+	Finally, set the pointer to the list to NULL.
 */
-void ft_lstdelone(t_list *lst, void (*del)(void *))
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	if (!lst)
-		return;
-	(*del)(lst->content);
-	free(lst);
+	t_list	*curr;
+	t_list	*cnext;
+
+	curr = *lst;
+	while (curr)
+	{
+		cnext = curr->next;
+		ft_lstdelone(curr, del);
+		curr = cnext;
+	}
+	*lst = NULL;
 }

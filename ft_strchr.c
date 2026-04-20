@@ -6,7 +6,7 @@
 /*   By: czuluaga <czuluaga@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/22 08:50:17 by czuluaga          #+#    #+#             */
-/*   Updated: 2026/03/22 08:50:18 by czuluaga         ###   ########.fr       */
+/*   Updated: 2026/04/20 11:31:30 by czuluaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@
 	part of the string, so that if c is specified as '\0', these functions
 	return a pointer to the terminator.
 */
-char *ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
 	if (!c)
 	{

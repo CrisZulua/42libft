@@ -6,13 +6,13 @@
 /*   By: czuluaga <czuluaga@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/22 08:50:56 by czuluaga          #+#    #+#             */
-/*   Updated: 2026/03/22 08:50:56 by czuluaga         ###   ########.fr       */
+/*   Updated: 2026/04/20 11:34:42 by czuluaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int ft_chrinset(const char *c, char const *set)
+static int	ft_chrinset(const char *c, char const *set)
 {
 	while (*set)
 	{
@@ -33,12 +33,12 @@ static int ft_chrinset(const char *c, char const *set)
 	A pointer to the trim string.
 	NULL if the allocation fails.
 */
-char *ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t i;
-	size_t start;
-	size_t end;
-	char *trim_str;
+	size_t	i;
+	size_t	start;
+	size_t	end;
+	char	*trim_str;
 
 	start = 0;
 	end = ft_strlen(s1);
