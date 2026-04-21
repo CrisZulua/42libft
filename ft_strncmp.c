@@ -6,7 +6,7 @@
 /*   By: czuluaga <czuluaga@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/22 08:50:45 by czuluaga          #+#    #+#             */
-/*   Updated: 2026/04/20 11:34:08 by czuluaga         ###   ########.fr       */
+/*   Updated: 2026/04/21 09:58:55 by czuluaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	size_t	i;
 
 	i = 0;
+	if (!n)
+		return (0);
 	n--;
 	while (i < n && *s1 && *s2 && *(unsigned char *)s1 == *(unsigned char *)s2)
 	{

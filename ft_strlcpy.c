@@ -6,7 +6,7 @@
 /*   By: czuluaga <czuluaga@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/22 08:50:34 by czuluaga          #+#    #+#             */
-/*   Updated: 2026/04/20 15:02:56 by czuluaga         ###   ########.fr       */
+/*   Updated: 2026/04/21 09:53:55 by czuluaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	size_t	src_len;
 
 	src_len = ft_strlen(src);
-	if (!src || !dst)
+	if (!src || !dst || !size)
 		return (src_len);
 	while (size-- > 1 && *src)
 	{

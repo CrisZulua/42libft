@@ -6,7 +6,7 @@
 /*   By: czuluaga <czuluaga@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/22 08:50:56 by czuluaga          #+#    #+#             */
-/*   Updated: 2026/04/20 11:34:42 by czuluaga         ###   ########.fr       */
+/*   Updated: 2026/04/21 10:16:09 by czuluaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	start = 0;
 	end = ft_strlen(s1);
-	while (ft_chrinset(&s1[start], set))
+	while (ft_chrinset(s1, set))
 		start++;
 	if (start >= end)
 		return ((char *)ft_calloc(1, sizeof(char)));
