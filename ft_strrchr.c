@@ -6,7 +6,7 @@
 /*   By: czuluaga <czuluaga@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/22 08:50:51 by czuluaga          #+#    #+#             */
-/*   Updated: 2026/04/20 11:34:30 by czuluaga         ###   ########.fr       */
+/*   Updated: 2026/04/21 15:33:06 by czuluaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,14 @@
 */
 char	*ft_strrchr(const char *s, int c)
 {
-	int	slen;
+	int				slen;
+	unsigned char	uc;
 
+	uc = (unsigned char)c;
 	slen = ft_strlen(s);
 	while (slen >= 0)
 	{
-		if (*(s + slen) == c)
+		if (*(s + slen) == uc)
 			return ((char *)(s + slen));
 		slen--;
 	}

@@ -6,7 +6,7 @@
 /*   By: czuluaga <czuluaga@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/22 08:49:43 by czuluaga          #+#    #+#             */
-/*   Updated: 2026/04/20 11:38:09 by czuluaga         ###   ########.fr       */
+/*   Updated: 2026/04/21 15:36:48 by czuluaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,4 +22,5 @@ void	ft_putnbr_fd(int n, int fd)
 
 	str = ft_itoa(n);
 	ft_putstr_fd(str, fd);
+	free(str);
 }

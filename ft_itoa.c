@@ -6,7 +6,7 @@
 /*   By: czuluaga <czuluaga@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/22 08:48:00 by czuluaga          #+#    #+#             */
-/*   Updated: 2026/04/20 11:25:03 by czuluaga         ###   ########.fr       */
+/*   Updated: 2026/04/21 15:36:38 by czuluaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ static int	ft_num_of_digits(int n)
 
 /*
 	DESCRIPTION
-	ALlocates memory and returns a string representing the
+	Allocates memory and returns a string representing the
 	integer received as an argument. Negative numbers are
 	handle.
 

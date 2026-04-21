@@ -6,7 +6,7 @@
 /*   By: czuluaga <czuluaga@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/22 08:50:31 by czuluaga          #+#    #+#             */
-/*   Updated: 2026/04/20 16:40:33 by czuluaga         ###   ########.fr       */
+/*   Updated: 2026/04/21 15:23:15 by czuluaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,12 +33,14 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	dlen = ft_strlen((const char *)dst);
 	if (!src || !dst || (size <= dlen))
 		return (slen + size);
+	else if (size > (dlen + slen))
+		size = dlen + slen + 1;
 	i = 0;
 	while (i < (size - dlen - 1) && *src)
 	{
-		*(dst + dlen + i) = *(src + i);
+		dst[dlen + i] = src[i];
 		i++;
 	}
-	*(dst + dlen + i) = 0;
+	dst[dlen + i] = 0;
 	return (slen + dlen);
 }

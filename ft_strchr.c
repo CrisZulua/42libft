@@ -6,7 +6,7 @@
 /*   By: czuluaga <czuluaga@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/22 08:50:17 by czuluaga          #+#    #+#             */
-/*   Updated: 2026/04/20 11:31:30 by czuluaga         ###   ########.fr       */
+/*   Updated: 2026/04/21 15:31:40 by czuluaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,10 @@
 */
 char	*ft_strchr(const char *s, int c)
 {
-	if (!c)
+	unsigned char	uc;
+
+	uc = (unsigned char)c;
+	if (!uc)
 	{
 		while (*s)
 			s++;
@@ -36,7 +39,7 @@ char	*ft_strchr(const char *s, int c)
 	}
 	while (*s)
 	{
-		if (*s == c)
+		if (*s == uc)
 			return ((char *)s);
 		s++;
 	}

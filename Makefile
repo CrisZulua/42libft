@@ -5,7 +5,7 @@ O_FLAGS = -MMD -MP
 NAME = libft.a
 OBJDIR = ./objects
 
-SRC = $(wildcard *.c)
+SRC = $(shell find -maxdepth 1 -name "*.c" -exec basename {} \;)
 OBJ = $(SRC:%.c=$(OBJDIR)/%.o)
 DEP = $(OBJ:%.o=%.d)
 

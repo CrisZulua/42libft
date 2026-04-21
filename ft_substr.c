@@ -6,11 +6,26 @@
 /*   By: czuluaga <czuluaga@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/22 08:51:06 by czuluaga          #+#    #+#             */
-/*   Updated: 2026/04/21 13:01:12 by czuluaga         ###   ########.fr       */
+/*   Updated: 2026/04/21 15:54:49 by czuluaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static size_t	tlen(char const *s, unsigned int start, size_t len)
+{
+	size_t	ssize;
+
+	ssize = ft_strlen(s);
+	if (ssize > start)
+	{
+		if (len < ssize - start)
+			return (len);
+		else
+			return (ssize - start);
+	}
+	return (0);
+}
 
 /*
 	DESCRIPTION
@@ -26,14 +41,16 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*substr;
 	size_t	i;
+	size_t	total_len;
 
 	if (!s)
 		return (NULL);
-	substr = (char *)ft_calloc(len + 1, sizeof(char));
+	total_len = tlen(s, start, len);
+	substr = (char *)ft_calloc(total_len + 1, sizeof(char));
 	if (!substr)
 		return (NULL);
 	i = 0;
-	while (s[start + i] && i < len)
+	while (i < total_len)
 	{
 		substr[i] = s[start + i];
 		i++;

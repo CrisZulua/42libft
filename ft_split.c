@@ -6,7 +6,7 @@
 /*   By: czuluaga <czuluaga@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/22 08:49:51 by czuluaga          #+#    #+#             */
-/*   Updated: 2026/04/20 15:37:45 by czuluaga         ###   ########.fr       */
+/*   Updated: 2026/04/21 16:38:46 by czuluaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,13 @@ static int	ft_get_num_words(char const *s, char c)
 
 	i = 0;
 	num_words = 0;
+	if (!s[i])
+		return (0);
 	if (s[i] != c)
 		num_words++;
 	while (s[i])
 	{
-		if (s[i] == c && s[i + 1] != c)
+		if (s[i] == c && s[i + 1] != c && s[i + 1] != '\0')
 			num_words++;
 		i++;
 	}
