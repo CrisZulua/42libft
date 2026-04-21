@@ -6,7 +6,7 @@
 /*   By: czuluaga <czuluaga@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/22 08:51:06 by czuluaga          #+#    #+#             */
-/*   Updated: 2026/04/20 16:01:17 by czuluaga         ###   ########.fr       */
+/*   Updated: 2026/04/21 13:01:12 by czuluaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 /*
 	DESCRIPTION
-	Allocates memory and returns a substrung from the string s.
+	Allocates memory and returns a substring from the string s.
 	The substring starts at index 'start' and has a maximum
 	length of 'len'.
 

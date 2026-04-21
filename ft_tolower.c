@@ -6,7 +6,7 @@
 /*   By: czuluaga <czuluaga@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/22 08:51:09 by czuluaga          #+#    #+#             */
-/*   Updated: 2026/04/20 11:34:56 by czuluaga         ###   ########.fr       */
+/*   Updated: 2026/04/21 12:31:28 by czuluaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@
 */
 int	ft_tolower(int c)
 {
+	if (c == -1)
+		return (-1);
 	if (!ft_isalpha(c) || c > 90)
 		return ((unsigned char)c);
 	return ((unsigned char)c + 32);
